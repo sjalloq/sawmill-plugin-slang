@@ -15,7 +15,7 @@ authors = [
 keywords = ["sawmill", "plugin", "slang", "eda", "log"]
 
 dependencies = [
-    "sawmill>=0.1.0",
+    "sawmill-parser>=0.2.0",
 ]
 
 [project.optional-dependencies]
