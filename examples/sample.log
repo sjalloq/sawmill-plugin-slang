@@ -1,0 +1,1410 @@
+src/lowrisc_ibex_ibex_pkg_0.1/rtl/ibex_pkg.sv:657:50: warning: implicit conversion from 'bit[159:0]' to 'lfsr_perm_t' (aka 'logic[31:0][4:0]') [-Wpacked-array-conv]
+  parameter lfsr_perm_t RndCnstLfsrPermDefault = {
+                                               ~ ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:41:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (sd_type)
+           ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:43:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (width)
+               ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:52:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (width)
+               ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:60:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (width)
+               ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:69:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (width)
+               ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:83:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (sd_type)
+           ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:85:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (width)
+               ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:94:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (width)
+               ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:102:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (width)
+               ^~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:111:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (width)
+               ^~~~
+src/mono_ip_ft601_0.1.0/rtl/ft601_sync.sv:158:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (state_q)
+           ^~~~
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:91:3: error: unknown module 'MMCME2_BASE'
+  MMCME2_BASE #(
+  ^~~~~~~~~~~
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:147:3: error: unknown module 'BUFG'
+  BUFG u_bufg_fb (
+  ^~~~
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:153:5: error: unknown module 'BUFG'
+    BUFG u_bufg (
+    ^~~~
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:162:5: error: unknown module 'BUFG'
+    BUFG u_bufg (
+    ^~~~
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:171:5: error: unknown module 'BUFG'
+    BUFG u_bufg (
+    ^~~~
+  in instance: squirrel_ibex_top.u_core.u_soc.u_itcm
+src/mono_ip_tcm_0.1.0/rtl/wb_tcm.sv:55:27: warning: comparison of differently signed types ('int' and 'logic[31:0]') [-Wsign-compare]
+        for (int i = 0; i < Width/8; i++) begin
+                        ~ ^ ~~~~~~~
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:247:47: warning: implicit conversion truncates from 32 to 8 bits [-Wwidth-trunc]
+assign depacketizer_source_source_param_dst = depacketizer_pack_source_payload_chunk0_data;
+                                            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:311:60: warning: implicit conversion expands from 8 to 32 bits [-Wwidth-expand]
+assign packetizer_header_unpack_sink_payload_chunk1_data = packetizer_sink_sink_param_dst;
+                                                         ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:427:9: warning: 'case' missing 'default' label [-Wcase-default]
+        case (grant)
+        ^~~~
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:537:17: warning: 'case' missing 'default' label [-Wcase-default]
+                case (depacketizer_pack_demux)
+                ^~~~
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:583:9: warning: 'case' missing 'default' label [-Wcase-default]
+        case (grant)
+        ^~~~
+src/mono_ip_wb_crossbar_0.1.0/rtl/wb_crossbar_decoder.sv:114:23: warning: comparison of differently signed types ('int' and 'int unsigned') [-Wsign-compare]
+    for (int s = 0; s < NumSlaves; s++) begin
+                    ~ ^ ~~~~~~~~~
+  in instance: squirrel_ibex_top.u_core.u_soc.u_crossbar.gen_arbiters[0].u_arbiter
+src/mono_ip_wb_crossbar_0.1.0/rtl/wb_crossbar_arbiter.sv:72:23: warning: comparison of differently signed types ('int' and 'int unsigned') [-Wsign-compare]
+    for (int m = 0; m < NumMasters; m++) begin
+                    ~ ^ ~~~~~~~~~~
+  in instance: squirrel_ibex_top.u_core.u_soc.u_crossbar.gen_arbiters[0].u_arbiter
+src/mono_ip_wb_crossbar_0.1.0/rtl/wb_crossbar_arbiter.sv:76:24: warning: implicit conversion changes signedness from 'logic signed[1:0]' to 'logic[1:0]' [-Wsign-conversion]
+        winner_idx   = MasterIdxW'(m);
+                     ~ ^~~~~~~~~~~~~~
+  in instance: squirrel_ibex_top.u_core.u_soc.u_crossbar.gen_arbiters[0].u_arbiter
+src/mono_ip_wb_crossbar_0.1.0/rtl/wb_crossbar_arbiter.sv:88:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (state_q)
+           ^~~~
+  in instance: squirrel_ibex_top.u_core.u_soc.u_crossbar.gen_arbiters[0].u_arbiter
+src/mono_ip_wb_crossbar_0.1.0/rtl/wb_crossbar_arbiter.sv:162:23: warning: comparison of differently signed types ('int' and 'int unsigned') [-Wsign-compare]
+    for (int m = 0; m < NumMasters; m++) begin
+                    ~ ^ ~~~~~~~~~~
+src/mono_ip_wb_crossbar_0.1.0/rtl/wb_crossbar.sv:111:23: warning: comparison of differently signed types ('int' and 'int unsigned') [-Wsign-compare]
+    for (int m = 0; m < NumMasters; m++) begin
+                    ~ ^ ~~~~~~~~~~
+src/mono_ip_wb_crossbar_0.1.0/rtl/wb_crossbar.sv:112:25: warning: comparison of differently signed types ('int' and 'int unsigned') [-Wsign-compare]
+      for (int s = 0; s < NumSlaves; s++) begin
+                      ~ ^ ~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:60:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (operator_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:85:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (1'b1)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:97:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (1'b1)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:120:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (operator_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:160:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (operator_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:280:31: warning: arithmetic between operands of different types ('int' and 'logic[4:0]') [-Warith-op-mismatch]
+  assign shift_amt_compl = 32 - operand_b_i[4:0];
+                           ~~ ^ ~~~~~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:305:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (operator_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:335:14: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+      unique case (1'b1)
+             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:372:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (operator_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:392:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (1'b1)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:1322:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (operator_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:43:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (rlist)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:54:45: warning: arithmetic between operands of different types ('logic[1:0]' and 'int') [-Warith-op-mismatch]
+    return cm_stack_adj_base(rlist) + spimm * 16;
+                                      ~~~~~ ^ ~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:67:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (rlist)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:223:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (instr_i[1:0])
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:226:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr_i[15:13])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:249:22: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+              unique case (instr_i[12:10])
+                     ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:257:28: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                    unique case (instr_i[6])
+                           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:282:28: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                    unique case (instr_i[6])
+                           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:328:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr_i[15:13])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:366:20: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+            unique case (instr_i[11:10])
+                   ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:384:24: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                unique case ({instr_i[12], instr_i[6:5]})
+                       ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:429:30: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                      unique case ({instr_i[4:2]})
+                             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:507:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr_i[15:13])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:552:22: warning: 'casez' marked 'unique' has 'default' label [-Wcase-redundant-default]
+              unique casez (instr_i[12:8])
+                     ^~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:557:26: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                  unique case (cm_state_q)
+                         ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:622:26: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                  unique case (cm_state_q)
+                         ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:674:32: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                        unique case (instr_i[12:8])
+                               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:705:26: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                  unique case (instr_i[6:5])
+                         ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:710:30: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                      unique case (cm_state_q)
+                             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:736:30: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                      unique case (cm_state_q)
+                             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:494:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (ctrl_fsm_cs)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:757:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case (1'b1)
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:138:14: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+      unique case ({pmp_cfg.read, pmp_cfg.write, pmp_cfg.exec})
+             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:335:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (csr_addr_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:555:28: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+      if (csr_addr inside {CSR_PMPCFG0,   CSR_PMPCFG1,   CSR_PMPCFG2,   CSR_PMPCFG3,
+          ~~~~~~~~         ^~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:555:43: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+      if (csr_addr inside {CSR_PMPCFG0,   CSR_PMPCFG1,   CSR_PMPCFG2,   CSR_PMPCFG3,
+          ~~~~~~~~                        ^~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:555:58: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+      if (csr_addr inside {CSR_PMPCFG0,   CSR_PMPCFG1,   CSR_PMPCFG2,   CSR_PMPCFG3,
+          ~~~~~~~~                                       ^~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:555:73: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+      if (csr_addr inside {CSR_PMPCFG0,   CSR_PMPCFG1,   CSR_PMPCFG2,   CSR_PMPCFG3,
+          ~~~~~~~~                                                      ^~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:556:28: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR0,  CSR_PMPADDR1,  CSR_PMPADDR2,  CSR_PMPADDR3,
+                           ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:556:43: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR0,  CSR_PMPADDR1,  CSR_PMPADDR2,  CSR_PMPADDR3,
+                                          ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:556:58: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR0,  CSR_PMPADDR1,  CSR_PMPADDR2,  CSR_PMPADDR3,
+                                                         ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:556:73: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR0,  CSR_PMPADDR1,  CSR_PMPADDR2,  CSR_PMPADDR3,
+                                                                        ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:557:28: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR4,  CSR_PMPADDR5,  CSR_PMPADDR6,  CSR_PMPADDR7,
+                           ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:557:43: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR4,  CSR_PMPADDR5,  CSR_PMPADDR6,  CSR_PMPADDR7,
+                                          ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:557:58: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR4,  CSR_PMPADDR5,  CSR_PMPADDR6,  CSR_PMPADDR7,
+                                                         ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:557:73: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR4,  CSR_PMPADDR5,  CSR_PMPADDR6,  CSR_PMPADDR7,
+                                                                        ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:558:28: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR8,  CSR_PMPADDR9,  CSR_PMPADDR10, CSR_PMPADDR11,
+                           ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:558:43: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR8,  CSR_PMPADDR9,  CSR_PMPADDR10, CSR_PMPADDR11,
+                                          ^~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:558:58: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR8,  CSR_PMPADDR9,  CSR_PMPADDR10, CSR_PMPADDR11,
+                                                         ^~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:558:73: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR8,  CSR_PMPADDR9,  CSR_PMPADDR10, CSR_PMPADDR11,
+                                                                        ^~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:559:28: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR12, CSR_PMPADDR13, CSR_PMPADDR14, CSR_PMPADDR15}) begin
+                           ^~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:559:43: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR12, CSR_PMPADDR13, CSR_PMPADDR14, CSR_PMPADDR15}) begin
+                                          ^~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:559:58: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR12, CSR_PMPADDR13, CSR_PMPADDR14, CSR_PMPADDR15}) begin
+                                                         ^~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:559:73: warning: comparison of different types in 'inside' statement ('csr_num_e' and 'logic[11:0]') [-Wcase-type]
+                           CSR_PMPADDR12, CSR_PMPADDR13, CSR_PMPADDR14, CSR_PMPADDR15}) begin
+                                                                        ^~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:610:14: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+      unique case (csr_addr_i)
+             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:716:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (1'b1)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:719:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (1'b1)
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:827:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (csr_op_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_counter.sv:65:14: warning: comparison of differently signed types ('int' and 'bit[23:0]') [-Wsign-compare]
+  if (UseDsp == "yes") begin : g_cnt_dsp
+      ~~~~~~ ^~ ~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:240:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (opcode)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:280:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr[14:12])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:309:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr[13:12])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:326:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr[13:12])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:357:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr[14:12])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:366:20: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+            unique case (instr[31:27])
+                   ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:382:24: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                unique case(instr[26:20])
+                       ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:407:22: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+              unique case (instr[31:27])
+                     ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:458:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case ({instr[31:25], instr[14:12]})
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:568:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr[14:12])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:596:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case (instr[31:20])
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:632:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case (instr[13:12])
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:692:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (opcode_alu)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:744:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr_alu[14:12])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:825:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr_alu[14:12])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:835:22: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+              unique case (instr_alu[31:27])
+                     ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:847:26: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                  unique case (instr_alu[26:20])
+                         ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:911:24: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+                unique case (instr_alu[31:27])
+                       ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:954:20: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+            unique case ({instr_alu[26:25], instr_alu[14:12]})
+                   ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:995:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case ({instr_alu[31:25], instr_alu[14:12]})
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:1143:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (instr_alu[14:12])
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:318:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (alu_op_a_mux_sel)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:376:14: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+      unique case (imm_b_mux_sel)
+             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:425:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (rf_wdata_sel)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:794:14: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+      unique case (id_fsm_q)
+             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:796:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case (1'b1)
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:200:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (exc_pc_mux_i)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:216:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (pc_mux_internal)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:119:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (lsu_type_i) // Data type 00 Word, 01 Half word, 11,10 byte
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:122:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case (data_offset)
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:130:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case (data_offset)
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:142:18: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+          unique case (data_offset)
+                 ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:156:16: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+        unique case (data_offset)
+               ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:176:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (data_offset)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:229:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (rdata_offset_q)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:244:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (rdata_offset_q)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:283:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (rdata_offset_q)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:322:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (data_type_q)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:383:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (ls_fsm_cs)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_multdiv_fast.sv:208:14: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+      unique case (mult_state_q)
+             ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_multdiv_fast.sv:425:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (md_state_q)
+           ^~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1948:62: error: could not resolve hierarchical path name 'sva_multdiv_fsm_idle'
+  `ASSERT(MultDivFSMIdleOnIdReady, id_in_ready |=> ex_block_i.sva_multdiv_fsm_idle)
+                                                             ^~~~~~~~~~~~~~~~~~~~~
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_async_sram_adapter.sv:21:36: warning: implicit conversion changes signedness from 'integer' to 'int unsigned' [-Wsign-conversion]
+  localparam int unsigned DepthW = $clog2(Depth+1)
+                                 ~ ^~~~~~~~~~~~~~~
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_async_sram_adapter.sv:77:35: warning: implicit conversion changes signedness from 'integer' to 'int unsigned' [-Wsign-conversion]
+  localparam int unsigned PtrVW = $clog2(Depth);
+                                ~ ^~~~~~~~~~~~~
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_async_sram_adapter.sv:368:18: warning: implicit conversion changes signedness from 'int unsigned' to 'int' [-Wsign-conversion]
+    for (int i = PtrW-2; i >= 0; i--) begin
+               ~ ^~~~~~
+  in 2 instances, e.g. squirrel_ibex_top.u_core.u_usb_subsystem.u_usb_uart.u_rx_len_fifo
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_sync.sv:206:37: warning: useless cast from 'int' to the same type [-Wuseless-cast]
+      assign rdata_o = empty ? Width'(0) : rdata_int;
+                               ~~~~~^ ~
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:574:36: warning: initializer for static variable 'unused_scramble_inputs' refers to 'scramble_key_valid_i' which will not have a value at initialization time [-Wstatic-init-value]
+    logic unused_scramble_inputs = scramble_key_valid_i & (|scramble_key_i) & (|RndCnstIbexKey) &
+                                   ^~~~~~~~~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:103:72: note: declared here
+  input  logic                                                         scramble_key_valid_i,
+                                                                       ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:574:61: warning: initializer for static variable 'unused_scramble_inputs' refers to 'scramble_key_i' which will not have a value at initialization time [-Wstatic-init-value]
+    logic unused_scramble_inputs = scramble_key_valid_i & (|scramble_key_i) & (|RndCnstIbexKey) &
+                                                            ^~~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:104:72: note: declared here
+  input  logic [SCRAMBLE_KEY_W-1:0]                                    scramble_key_i,
+                                                                       ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:575:38: warning: initializer for static variable 'unused_scramble_inputs' refers to 'scramble_nonce_i' which will not have a value at initialization time [-Wstatic-init-value]
+                                   (|scramble_nonce_i) & (|RndCnstIbexNonce) & scramble_req_q &
+                                     ^~~~~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:105:72: note: declared here
+  input  logic [SCRAMBLE_NONCE_W-1:0]                                  scramble_nonce_i,
+                                                                       ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:575:80: warning: initializer for static variable 'unused_scramble_inputs' refers to 'scramble_req_q' which will not have a value at initialization time [-Wstatic-init-value]
+                                   (|scramble_nonce_i) & (|RndCnstIbexNonce) & scramble_req_q &
+                                                                               ^~~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:225:48: note: declared here
+  logic                        scramble_req_d, scramble_req_q;
+                                               ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:576:36: warning: initializer for static variable 'unused_scramble_inputs' refers to 'ic_scr_key_req' which will not have a value at initialization time [-Wstatic-init-value]
+                                   ic_scr_key_req & scramble_key_valid_d & scramble_req_d;
+                                   ^~~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:216:32: note: declared here
+  logic                        ic_scr_key_req;
+                               ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:576:53: warning: initializer for static variable 'unused_scramble_inputs' refers to 'scramble_key_valid_d' which will not have a value at initialization time [-Wstatic-init-value]
+                                   ic_scr_key_req & scramble_key_valid_d & scramble_req_d;
+                                                    ^~~~~~~~~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:224:32: note: declared here
+  logic                        scramble_key_valid_d, scramble_key_valid_q;
+                               ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:576:76: warning: initializer for static variable 'unused_scramble_inputs' refers to 'scramble_req_d' which will not have a value at initialization time [-Wstatic-init-value]
+                                   ic_scr_key_req & scramble_key_valid_d & scramble_req_d;
+                                                                           ^~~~~~~~~~~~~~
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:225:32: note: declared here
+  logic                        scramble_req_d, scramble_req_q;
+                               ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:1261:61: warning: implicit conversion from 'pending_access_t' to boolean value [-Wint-bool-conv]
+    `ASSERT(PendingAccessTrackingCorrect, data_rvalid_i |-> pending_dside_accesses_q[0])
+                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:607:12: warning: 'case' marked 'unique' has 'default' label [-Wcase-redundant-default]
+    unique case (1'b1)
+           ^~~~
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_tx_ctrl.sv:48:19: error: identifier 'DepthW' used before its declaration
+    input  logic [DepthW-1:0] fifo_depth_i,
+                  ^~~~~~
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_tx_ctrl.sv:95:29: note: declared here
+    localparam int unsigned DepthW = prim_util_pkg::vbits(DEPTH + 1);
+                            ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_tx_ctrl.sv:205:74: warning: arithmetic between operands of different types ('logic[6:0]' and 'bit signed[6:0]') [-Warith-op-mismatch]
+    assign tx_last_o = tx_valid_o && (words_sent_q == flush_word_count_q - DepthW'(1));
+                                                      ~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_tx_ctrl.sv:246:60: warning: arithmetic between operands of different types ('logic[6:0]' and 'bit signed[6:0]') [-Warith-op-mismatch]
+                            flush_word_count_d = level_int + DepthW'(1);
+                                                 ~~~~~~~~~ ^ ~~~~~~~~~~
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_tx_ctrl.sv:259:53: warning: arithmetic between operands of different types ('logic[6:0]' and 'bit signed[6:0]') [-Warith-op-mismatch]
+                        words_sent_d = words_sent_q + DepthW'(1);
+                                       ~~~~~~~~~~~~ ^ ~~~~~~~~~~
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_rx_ctrl.sv:50:19: error: identifier 'LenDepthW' used before its declaration
+    input  logic [LenDepthW-1:0] len_fifo_depth_i,
+                  ^~~~~~~~~
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_rx_ctrl.sv:88:29: note: declared here
+    localparam int unsigned LenDepthW = prim_util_pkg::vbits(LEN_DEPTH + 1);
+                            ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:56:5: error: unknown module 'BUFG'
+    BUFG u_clk100_buf (
+    ^~~~
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:61:5: error: unknown module 'SRL16E'
+    SRL16E #(
+    ^~~~~~
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:125:9: error: unknown module 'IOBUF'
+        IOBUF u_iobuf_data (
+        ^~~~~
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:136:9: error: unknown module 'IOBUF'
+        IOBUF u_iobuf_be (
+        ^~~~~
+in file included from src/mono_ip_tcm_0.1.0/rtl/wb_tcm.sv:92:
+  in instance: squirrel_ibex_top.u_core.u_soc.u_itcm
+src/lowrisc_prim_util_memload_0/rtl/prim_util_memload.svh:38:34: warning: comparison of differently signed types ('int' and 'int unsigned') [-Wsign-compare]
+    valid = Width > 312 || index >= Depth ? 0 : 1;
+                           ~~~~~ ^~ ~~~~~
+  in instance: squirrel_ibex_top.u_core.u_soc.u_itcm
+src/lowrisc_prim_util_memload_0/rtl/prim_util_memload.svh:48:34: warning: comparison of differently signed types ('int' and 'int unsigned') [-Wsign-compare]
+    valid = Width > 312 || index >= Depth ? 0 : 1;
+                           ~~~~~ ^~ ~~~~~
+src/lowrisc_prim_generic_clock_gating_0/rtl/prim_clock_gating.sv:11:17: warning: unused parameter 'NoFpgaGate' [-Wunused-parameter]
+  parameter bit NoFpgaGate = 1'b0, // this parameter has no function in generic
+                ^
+src/lowrisc_prim_generic_clock_gating_0/rtl/prim_clock_gating.sv:12:17: warning: unused parameter 'FpgaBufGlobal' [-Wunused-parameter]
+  parameter bit FpgaBufGlobal = 1'b1 // this parameter has no function in generic
+                ^
+src/lowrisc_prim_generic_flop_no_rst_0/rtl/prim_flop_no_rst.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_flop_no_rst #(
+       ^
+src/lowrisc_prim_generic_usb_diff_rx_0/rtl/prim_usb_diff_rx.sv:10:8: warning: module definition is unused [-Wunused-def]
+module prim_usb_diff_rx #(
+       ^
+src/lowrisc_prim_generic_xnor2_0/rtl/prim_xnor2.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_xnor2 #(
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:127:11: warning: enumeration value 'SecdedNone' not explicitly handled in case statement [-Wcase-enum-explicit]
+    case (ecc_type)
+          ^~~~~~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv:152:11: warning: enumeration value 'SecdedNone' not explicitly handled in case statement [-Wcase-enum-explicit]
+    case (ecc_type)
+          ^~~~~~~~
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_22_16_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_22_16_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_22_16_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_22_16_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_28_22_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_28_22_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_28_22_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_28_22_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_39_32_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_39_32_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_39_32_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_39_32_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_64_57_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_64_57_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_64_57_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_64_57_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_72_64_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_72_64_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_72_64_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_72_64_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_22_16_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_hamming_22_16_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_22_16_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_hamming_22_16_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_39_32_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_hamming_39_32_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_39_32_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_hamming_39_32_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_72_64_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_hamming_72_64_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_72_64_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_hamming_72_64_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_76_68_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_hamming_76_68_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_76_68_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_hamming_76_68_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_64_57_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_inv_64_57_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_64_57_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_inv_64_57_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_72_64_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_inv_72_64_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_72_64_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_inv_72_64_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_72_64_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_inv_hamming_72_64_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_72_64_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_inv_hamming_72_64_enc (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_76_68_dec.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_inv_hamming_76_68_dec (
+       ^
+src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_76_68_enc.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_secded_inv_hamming_76_68_enc (
+       ^
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:49:18: warning: undriven output port 'locked_o' [-Wundriven-port]
+    output logic locked_o
+                 ^
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:84:9: warning: variable 'clkout0_unbuf' is never assigned a value [-Wunassigned-variable]
+  logic clkout0_unbuf;
+        ^
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:85:9: warning: variable 'clkout1_unbuf' is never assigned a value [-Wunassigned-variable]
+  logic clkout1_unbuf;
+        ^
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:86:9: warning: variable 'clkout2_unbuf' is never assigned a value [-Wunassigned-variable]
+  logic clkout2_unbuf;
+        ^
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:87:9: warning: variable 'clkout3_unbuf' is never assigned a value [-Wunassigned-variable]
+  logic clkout3_unbuf;
+        ^
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:88:9: warning: variable 'clk_fb' is never assigned a value [-Wunassigned-variable]
+  logic clk_fb;
+        ^
+src/mono_ip_mmcm_0.1.0/rtl/mmcm.sv:89:9: warning: variable 'clk_fb_buf' is never assigned a value [-Wunassigned-variable]
+  logic clk_fb_buf;
+        ^
+src/lowrisc_prim_cdc_rand_delay_0/rtl/prim_cdc_rand_delay.sv:17:8: warning: module definition is unused [-Wunused-def]
+module prim_cdc_rand_delay #(
+       ^
+src/lowrisc_prim_cipher_0/rtl/prim_present.sv:25:8: warning: module definition is unused [-Wunused-def]
+module prim_present #(
+       ^
+src/lowrisc_prim_generic_pad_attr_0/rtl/prim_pad_attr.sv:8:8: warning: module definition is unused [-Wunused-def]
+module prim_pad_attr
+       ^
+src/lowrisc_prim_generic_pad_wrapper_0/rtl/prim_pad_wrapper.sv:10:8: warning: module definition is unused [-Wunused-def]
+module prim_pad_wrapper
+       ^
+src/lowrisc_prim_generic_ram_1r1w_0/rtl/prim_ram_1r1w.sv:9:8: warning: module definition is unused [-Wunused-def]
+module prim_ram_1r1w import prim_ram_2p_pkg::*; #(
+       ^
+src/lowrisc_prim_generic_ram_2p_0/rtl/prim_ram_2p.sv:9:8: warning: module definition is unused [-Wunused-def]
+module prim_ram_2p import prim_ram_2p_pkg::*; #(
+       ^
+src/lowrisc_prim_generic_rom_0/rtl/prim_rom.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_rom import prim_rom_pkg::*; #(
+       ^
+src/lowrisc_prim_sec_anchor_0.1/rtl/prim_sec_anchor_flop.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_sec_anchor_flop #(
+       ^
+src/mono_ip_csr_0.1.0/rtl/wb2simple.sv:60:11: warning: variable 'unused' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused;
+          ^
+src/mono_ip_sim_ctrl_0.1.0/rtl/wb_sim_ctrl.sv:149:28: warning: unused parameter 'LogName' [-Wunused-parameter]
+    parameter string       LogName  = "sim_out.log",
+                           ^
+src/mono_ip_sim_ctrl_0.1.0/rtl/wb_sim_ctrl.sv:150:28: warning: unused parameter 'FlushOnChar' [-Wunused-parameter]
+    parameter bit          FlushOnChar = 1,
+                           ^
+src/mono_ip_sim_ctrl_0.1.0/rtl/wb_sim_ctrl.sv:151:28: warning: unused parameter 'UseFinish' [-Wunused-parameter]
+    parameter bit          UseFinish   = 0
+                           ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:51:6: warning: net 'depacketizer_sink_sink_first' is driven but its value is never used [-Wunused-but-set-net]
+wire depacketizer_sink_sink_first;
+     ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:52:6: warning: net 'depacketizer_sink_sink_last' is driven but its value is never used [-Wunused-but-set-net]
+wire depacketizer_sink_sink_last;
+     ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:62:13: warning: net 'depacketizer_preamble' is driven but its value is never used [-Wunused-but-set-net]
+wire [31:0] depacketizer_preamble;
+            ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:87:6: warning: net 'packetizer_sink_sink_first' is driven but its value is never used [-Wunused-but-set-net]
+wire packetizer_sink_sink_first;
+     ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:90:12: warning: net 'packetizer_sink_sink_payload_error' is driven but its value is never used [-Wunused-but-set-net]
+wire [3:0] packetizer_sink_sink_payload_error;
+           ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:100:6: warning: net 'packetizer_header_unpack_source_first' is driven but its value is never used [-Wunused-but-set-net]
+wire packetizer_header_unpack_source_first;
+     ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:101:6: warning: net 'packetizer_header_unpack_source_last' is driven but its value is never used [-Wunused-but-set-net]
+wire packetizer_header_unpack_source_last;
+     ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:167:5: warning: variable 'status0_first' is assigned but its value is never used [-Wunused-but-set-variable]
+reg status0_first = 1'd1;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:171:5: warning: variable 'status1_first' is assigned but its value is never used [-Wunused-but-set-variable]
+reg status1_first = 1'd1;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:258:5: warning: variable 'dummy_d' is assigned but its value is never used [-Wunused-but-set-variable]
+reg dummy_d;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:319:5: warning: variable 'dummy_d_1' is assigned but its value is never used [-Wunused-but-set-variable]
+reg dummy_d_1;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:342:5: warning: variable 'dummy_d_2' is assigned but its value is never used [-Wunused-but-set-variable]
+reg dummy_d_2;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:382:5: warning: variable 'dummy_d_3' is assigned but its value is never used [-Wunused-but-set-variable]
+reg dummy_d_3;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:403:5: warning: variable 'dummy_d_4' is assigned but its value is never used [-Wunused-but-set-variable]
+reg dummy_d_4;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:415:5: warning: variable 'dummy_d_5' is assigned but its value is never used [-Wunused-but-set-variable]
+reg dummy_d_5;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:459:5: warning: variable 'dummy_d_6' is assigned but its value is never used [-Wunused-but-set-variable]
+reg dummy_d_6;
+    ^
+src/mono_ip_usb_core-netlist_0.1.0/usb_core.v:474:5: warning: variable 'dummy_d_7' is assigned but its value is never used [-Wunused-but-set-variable]
+reg dummy_d_7;
+    ^
+  in instance: squirrel_ibex_top.u_core.u_cdc_rx_fifo.sync_wptr
+src/lowrisc_prim_generic_flop_2sync_0/rtl/prim_flop_2sync.sv:34:9: warning: variable 'unused_sig' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_sig;
+        ^
+src/lowrisc_prim_generic_flop_en_0/rtl/prim_flop_en.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_flop_en #(
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi4_sender.sv:15:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi4_sender
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi4_sync.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi4_sync
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi4_dec.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi4_dec
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi8_sender.sv:15:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi8_sender
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi8_sync.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi8_sync
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi8_dec.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi8_dec
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi12_sender.sv:15:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi12_sender
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi12_sync.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi12_sync
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi12_dec.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi12_dec
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi16_sender.sv:15:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi16_sender
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi16_sync.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi16_sync
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi16_dec.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi16_dec
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi20_sender.sv:15:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi20_sender
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi20_sync.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi20_sync
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi20_dec.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi20_dec
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi24_sender.sv:15:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi24_sender
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi24_sync.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi24_sync
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi24_dec.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi24_dec
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi28_sender.sv:15:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi28_sender
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi28_sync.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi28_sync
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi28_dec.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi28_dec
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi32_sender.sv:15:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi32_sender
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi32_sync.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi32_sync
+       ^
+src/lowrisc_prim_mubi_0.1/rtl/prim_mubi32_dec.sv:14:8: warning: module definition is unused [-Wunused-def]
+module prim_mubi32_dec
+       ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:60:18: warning: enumeration values 'ALU_ADD', 'ALU_XOR', 'ALU_OR' (and 46 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+    unique case (operator_i)
+                 ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:120:18: warning: enumeration values 'ALU_ADD', 'ALU_SUB', 'ALU_XOR' (and 57 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+    unique case (operator_i)
+                 ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:160:18: warning: enumeration values 'ALU_ADD', 'ALU_SUB', 'ALU_XOR' (and 50 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+    unique case (operator_i)
+                 ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:253:23: warning: variable 'unused_shift_result_ext' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic               unused_shift_result_ext;
+                      ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:305:18: warning: enumeration values 'ALU_ADD', 'ALU_SUB', 'ALU_XOR' (and 55 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+    unique case (operator_i)
+                 ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:372:18: warning: enumeration values 'ALU_ADD', 'ALU_SUB', 'ALU_XOR' (and 58 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+    unique case (operator_i)
+                 ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:1291:18: warning: variable 'unused_imd_val_q' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [31:0] unused_imd_val_q[2];
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:1293:18: warning: variable 'unused_butterfly_result' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [31:0] unused_butterfly_result;
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:1295:18: warning: variable 'unused_invbutterfly_result' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [31:0] unused_invbutterfly_result;
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_alu.sv:1397:9: warning: variable 'unused_shift_amt_compl' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_shift_amt_compl;
+        ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:60:17: warning: variable 'unused_tmp' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [1:0] unused_tmp;
+                ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:557:32: warning: enumeration values 'CmPopLoadReg', 'CmPopIncrSp', 'CmPopZeroA0' (and 2 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+                  unique case (cm_state_q)
+                               ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:622:32: warning: enumeration values 'CmPushStoreReg', 'CmPushDecrSp', and 'CmMvSecondReg' not explicitly handled in case statement [-Wcase-enum-explicit]
+                  unique case (cm_state_q)
+                               ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:710:36: warning: enumeration values 'CmPushStoreReg', 'CmPushDecrSp', 'CmPopLoadReg' (and 3 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+                      unique case (cm_state_q)
+                                   ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_compressed_decoder.sv:736:36: warning: enumeration values 'CmPushStoreReg', 'CmPushDecrSp', 'CmPopLoadReg' (and 3 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+                      unique case (cm_state_q)
+                                   ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:160:15: warning: variable 'unused_irq_timer' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic       unused_irq_timer;
+              ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:359:11: warning: variable 'unused_mem_resp_intg_err_i' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_mem_resp_intg_err_i;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:905:3: warning: variable 'unused_fcov_all_debug_req' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, all_debug_req, debug_req_i || debug_mode_q || debug_single_step_i)
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:906:3: warning: variable 'unused_fcov_debug_wakeup' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:908:3: warning: variable 'unused_fcov_interrupt_taken' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, interrupt_taken, (ctrl_fsm_cs != IRQ_TAKEN) & (ctrl_fsm_ns == IRQ_TAKEN))
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:909:3: warning: variable 'unused_fcov_debug_entry_if' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, debug_entry_if,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:911:3: warning: variable 'unused_fcov_debug_entry_id' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, debug_entry_id,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:913:3: warning: variable 'unused_fcov_pipe_flush' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, pipe_flush, (ctrl_fsm_cs != FLUSH) & (ctrl_fsm_ns == FLUSH))
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:914:3: warning: variable 'unused_fcov_debug_req' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, debug_req, debug_req_i & ~debug_mode_q)
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_controller.sv:915:3: warning: variable 'unused_fcov_debug_single_step_taken' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, debug_single_step_taken, do_single_step_d & ~do_single_step_q)
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:134:11: warning: unused variable 'unused_cfg' [-Wunused-variable]
+    logic unused_cfg = ^{pmp_cfg.mode};
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:270:16: warning: variable 'unused_mhpmcounter_we_1' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic        unused_mhpmcounter_we_1;
+               ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:271:16: warning: variable 'unused_mhpmcounterh_we_1' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic        unused_mhpmcounterh_we_1;
+               ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:272:16: warning: variable 'unused_mhpmcounter_incr_1' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic        unused_mhpmcounter_incr_1;
+               ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:303:16: warning: variable 'unused_boot_addr' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic [7:0]  unused_boot_addr;
+               ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:304:16: warning: variable 'unused_csr_addr' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic [2:0]  unused_csr_addr;
+               ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:610:20: warning: enumeration values 'CSR_MVENDORID', 'CSR_MARCHID', 'CSR_MIMPID' (and 67 others) not explicitly handled in case statement [-Wcase-enum-explicit]
+      unique case (csr_addr_i)
+                   ^~~~~~~~~~
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1409:15: warning: variable 'unused_instr_ret_compressed_spec_i' is assigned but its value is never used [-Wunused-but-set-variable]
+        logic unused_instr_ret_compressed_spec_i;
+              ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1416:35: warning: variable 'unused_mhphcounter_we' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [29-MHPMCounterNum-1:0] unused_mhphcounter_we;
+                                  ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1417:35: warning: variable 'unused_mhphcounterh_we' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [29-MHPMCounterNum-1:0] unused_mhphcounterh_we;
+                                  ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1418:35: warning: variable 'unused_mhphcounter_incr' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [29-MHPMCounterNum-1:0] unused_mhphcounter_incr;
+                                  ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1585:11: warning: variable 'unused_dit' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_dit;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1606:17: warning: variable 'unused_dummy_en' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic       unused_dummy_en;
+                ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1607:17: warning: variable 'unused_dummy_mask' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [2:0] unused_dummy_mask;
+                ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1639:11: warning: variable 'unused_icen' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_icen;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_cs_registers.sv:1646:11: warning: variable 'unused_ic_scr_key_valid' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_ic_scr_key_valid;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:110:16: warning: variable 'unused_instr_alu' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic [9:0]  unused_instr_alu;
+               ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:157:11: warning: variable 'unused_clk' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_clk;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_decoder.sv:158:11: warning: variable 'unused_rst_n' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_rst_n;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_ex_block.sv:104:18: warning: variable 'unused_bt_a_operand' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [31:0] unused_bt_a_operand, unused_bt_b_operand;
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_ex_block.sv:104:39: warning: variable 'unused_bt_b_operand' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [31:0] unused_bt_a_operand, unused_bt_b_operand;
+                                      ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_fetch_fifo.sv:62:29: warning: variable 'unused_addr_in' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic                     unused_addr_in;
+                            ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:366:17: warning: variable 'unused_a_mux_sel' is assigned but its value is never used [-Wunused-but-set-variable]
+    op_a_sel_e  unused_a_mux_sel;
+                ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:367:17: warning: variable 'unused_b_mux_sel' is assigned but its value is never used [-Wunused-but-set-variable]
+    imm_b_sel_e unused_b_mux_sel;
+                ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1052:11: warning: variable 'unused_data_req_done_ex' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_data_req_done_ex;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1053:17: warning: variable 'unused_rf_waddr_wb' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [4:0] unused_rf_waddr_wb;
+                ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1054:11: warning: variable 'unused_rf_write_wb' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_rf_write_wb;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1055:11: warning: variable 'unused_outstanding_load_wb' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_outstanding_load_wb;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1056:11: warning: variable 'unused_outstanding_store_wb' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_outstanding_store_wb;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1057:11: warning: variable 'unused_wb_exception' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_wb_exception;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1058:18: warning: variable 'unused_rf_wdata_fwd_wb' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [31:0] unused_rf_wdata_fwd_wb;
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1059:11: warning: variable 'unused_id_exception' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_id_exception;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1094:3: warning: variable 'unused_fcov_rf_rd_wb_hz' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL_GEN_IF(logic, rf_rd_wb_hz,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:110:5: note: expanded from macro 'DV_FCOV_SIGNAL_GEN_IF'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1096:3: warning: variable 'unused_fcov_branch_taken' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, branch_taken,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_id_stage.sv:1098:3: warning: variable 'unused_fcov_branch_not_taken' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, branch_not_taken,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:137:22: warning: variable 'unused_fetch_addr_n0' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic              unused_fetch_addr_n0;
+                     ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:182:22: warning: variable 'unused_boot_addr' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic        [7:0] unused_boot_addr;
+                     ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:183:22: warning: variable 'unused_csr_mtvec' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic        [7:0] unused_csr_mtvec;
+                     ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:184:22: warning: variable 'unused_exc_cause' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic              unused_exc_cause;
+                     ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:351:29: warning: variable 'unused_icen' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic                   unused_icen, unused_icinv, unused_scr_key_valid;
+                            ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:351:42: warning: variable 'unused_icinv' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic                   unused_icen, unused_icinv, unused_scr_key_valid;
+                                         ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:351:56: warning: variable 'unused_scr_key_valid' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic                   unused_icen, unused_icinv, unused_scr_key_valid;
+                                                       ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:352:29: warning: variable 'unused_tag_ram_input' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [TagSizeECC-1:0]  unused_tag_ram_input [IC_NUM_WAYS];
+                            ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:353:29: warning: variable 'unused_data_ram_input' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [LineSizeECC-1:0] unused_data_ram_input [IC_NUM_WAYS];
+                            ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:378:72: warning: unused formal argument 'val' [-Wunused-argument]
+    function automatic int simutil_get_scramble_key(output bit [127:0] val);
+                                                                       ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:381:74: warning: unused formal argument 'nonce' [-Wunused-argument]
+    function automatic int simutil_get_scramble_nonce(output bit [319:0] nonce);
+                                                                         ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:471:18: warning: variable 'unused_dummy_en' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic        unused_dummy_en;
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:472:18: warning: variable 'unused_dummy_mask' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [2:0]  unused_dummy_mask;
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:473:18: warning: variable 'unused_dummy_seed_en' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic        unused_dummy_seed_en;
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:474:18: warning: variable 'unused_dummy_seed' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [31:0] unused_dummy_seed;
+                 ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:715:3: warning: variable 'unused_fcov_dummy_instr_type' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL_GEN_IF(logic [1:0], dummy_instr_type,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:110:5: note: expanded from macro 'DV_FCOV_SIGNAL_GEN_IF'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_if_stage.sv:717:3: warning: variable 'unused_fcov_insert_dummy_instr' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL_GEN_IF(logic, insert_dummy_instr,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:110:5: note: expanded from macro 'DV_FCOV_SIGNAL_GEN_IF'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:595:3: warning: variable 'unused_fcov_ls_error_exception' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, ls_error_exception, (load_err_o | store_err_o) & ~pmp_err_q)
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:596:3: warning: variable 'unused_fcov_ls_pmp_exception' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, ls_pmp_exception, (load_err_o | store_err_o) & pmp_err_q)
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:597:3: warning: variable 'unused_fcov_ls_first_req' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, ls_first_req, lsu_req_i & (ls_fsm_cs == IDLE))
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:598:3: warning: variable 'unused_fcov_ls_second_req' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, ls_second_req,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:600:3: warning: variable 'unused_fcov_ls_mis_pmp_err_1' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, ls_mis_pmp_err_1,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_load_store_unit.sv:602:3: warning: variable 'unused_fcov_ls_mis_pmp_err_2' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, ls_mis_pmp_err_2,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_multdiv_fast.sv:95:9: warning: variable 'unused_mult_sel_i' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_mult_sel_i;
+        ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_multdiv_fast.sv:130:15: warning: variable 'unused_imd_val' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic [1:0] unused_imd_val;
+              ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_multdiv_fast.sv:132:9: warning: variable 'unused_mac_res_ext' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_mac_res_ext;
+        ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_multdiv_fast.sv:149:25: warning: variable 'unused_mult1_res_uns' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [33:32]       unused_mult1_res_uns;
+                        ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_multdiv_fast.sv:386:15: warning: variable 'unused_alu_adder_ext' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic [1:0] unused_alu_adder_ext;
+              ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_multdiv_fast.sv:537:9: warning: variable 'unused_sva_fsm_idle' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_sva_fsm_idle;
+        ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_wb_stage.sv:221:21: warning: variable 'unused_clk' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic           unused_clk;
+                    ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_wb_stage.sv:222:21: warning: variable 'unused_rst' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic           unused_rst;
+                    ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_wb_stage.sv:223:21: warning: variable 'unused_instr_type_wb' is assigned but its value is never used [-Wunused-but-set-variable]
+    wb_instr_type_e unused_instr_type_wb;
+                    ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_wb_stage.sv:224:21: warning: variable 'unused_pc_id' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [31:0]    unused_pc_id;
+                    ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_wb_stage.sv:225:21: warning: variable 'unused_dummy_instr_id' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic           unused_dummy_instr_id;
+                    ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_wb_stage.sv:249:3: warning: variable 'unused_fcov_wb_valid' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL_GEN_IF(logic, wb_valid, g_writeback_stage.wb_valid_q, WritebackStage)
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:110:5: note: expanded from macro 'DV_FCOV_SIGNAL_GEN_IF'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:389:33: warning: variable 'unused_illegal_insn_id' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic        illegal_insn_id, unused_illegal_insn_id; // ID stage sees an illegal instruction
+                                ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:543:11: warning: variable 'unused_fetch_enable' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_fetch_enable;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:885:11: warning: variable 'unused_expecting_load_resp_id' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_expecting_load_resp_id;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:886:11: warning: variable 'unused_expecting_store_resp_id' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_expecting_store_resp_id;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:941:11: warning: variable 'unused_rf_ren_a' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_rf_ren_a, unused_rf_ren_b;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:941:28: warning: variable 'unused_rf_ren_b' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_rf_ren_a, unused_rf_ren_b;
+                           ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:942:11: warning: variable 'unused_rf_rd_a_wb_match' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_rf_rd_a_wb_match, unused_rf_rd_b_wb_match;
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:942:36: warning: variable 'unused_rf_rd_b_wb_match' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_rf_rd_a_wb_match, unused_rf_rd_b_wb_match;
+                                   ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1211:28: warning: variable 'unused_priv_lvl_ls' is assigned but its value is never used [-Wunused-but-set-variable]
+    priv_lvl_e             unused_priv_lvl_ls;
+                           ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1212:28: warning: variable 'unused_csr_pmp_addr' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic [PMP_ADDR_MSB:0] unused_csr_pmp_addr [PMPNumRegions];
+                           ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1213:28: warning: variable 'unused_csr_pmp_cfg' is assigned but its value is never used [-Wunused-but-set-variable]
+    pmp_cfg_t              unused_csr_pmp_cfg  [PMPNumRegions];
+                           ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1214:28: warning: variable 'unused_csr_pmp_mseccfg' is assigned but its value is never used [-Wunused-but-set-variable]
+    pmp_mseccfg_t          unused_csr_pmp_mseccfg;
+                           ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1935:9: warning: variable 'unused_instr_new_id' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_instr_new_id, unused_instr_id_done, unused_instr_done_wb,
+        ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1935:30: warning: variable 'unused_instr_id_done' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_instr_new_id, unused_instr_id_done, unused_instr_done_wb,
+                             ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1935:52: warning: variable 'unused_instr_done_wb' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_instr_new_id, unused_instr_id_done, unused_instr_done_wb,
+                                                   ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1936:9: warning: variable 'unused_instr_expanded_id' is assigned but its value is never used [-Wunused-but-set-variable]
+        unused_instr_expanded_id, unused_instr_gets_expanded_id;
+        ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1936:35: warning: variable 'unused_instr_gets_expanded_id' is assigned but its value is never used [-Wunused-but-set-variable]
+        unused_instr_expanded_id, unused_instr_gets_expanded_id;
+                                  ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1956:3: warning: variable 'unused_fcov_rf_ecc_err_a_id' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL_GEN_IF(logic, rf_ecc_err_a_id, gen_regfile_ecc.rf_ecc_err_a_id, RegFileECC)
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:110:5: note: expanded from macro 'DV_FCOV_SIGNAL_GEN_IF'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1957:3: warning: variable 'unused_fcov_rf_ecc_err_b_id' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL_GEN_IF(logic, rf_ecc_err_b_id, gen_regfile_ecc.rf_ecc_err_b_id, RegFileECC)
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:110:5: note: expanded from macro 'DV_FCOV_SIGNAL_GEN_IF'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1964:3: warning: variable 'unused_fcov_csr_read_only' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, csr_read_only,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_ibex_ibex_core_0.1/rtl/ibex_core.sv:1966:3: warning: variable 'unused_fcov_csr_write' is assigned but its value is never used [-Wunused-but-set-variable]
+  `DV_FCOV_SIGNAL(logic, csr_write,
+  ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:93:5: note: expanded from macro 'DV_FCOV_SIGNAL'
+    `DV_FCOV_MARK_UNUSED(TYPE_, NAME_)
+    ^
+src/lowrisc_dv_dv_fcov_macros_0/dv_fcov_macros.svh:81:11: note: expanded from macro 'DV_FCOV_MARK_UNUSED'
+    TYPE_ unused_fcov_``NAME_; \
+          ^
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_async_sram_adapter.sv:9:8: warning: module definition is unused [-Wunused-def]
+module prim_fifo_async_sram_adapter #(
+       ^
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_async_simple.sv:8:8: warning: module definition is unused [-Wunused-def]
+module prim_fifo_async_simple #(
+       ^
+  in instance: squirrel_ibex_top.u_core.u_cdc_rx_fifo
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_async.sv:228:29: warning: variable 'unused_decval_msb' is assigned but its value is never used [-Wunused-but-set-variable]
+      logic                 unused_decval_msb;
+                            ^
+  in instance: squirrel_ibex_top.u_core.u_cdc_rx_fifo
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_async.sv:249:29: warning: variable 'unused_decsub_msb' is assigned but its value is never used [-Wunused-but-set-variable]
+      logic                 unused_decsub_msb;
+                            ^
+src/lowrisc_prim_fifo_0/rtl/prim_fifo_sync.sv:237:9: warning: variable 'unused_assert_connected' is never assigned a value [-Wunassigned-variable]
+  logic unused_assert_connected;
+        ^
+src/lowrisc_prim_generic_clock_div_0/rtl/prim_clock_div.sv:7:8: warning: module definition is unused [-Wunused-def]
+module prim_clock_div #(
+       ^
+src/lowrisc_prim_generic_rst_sync_0/rtl/prim_rst_sync.sv:10:8: warning: module definition is unused [-Wunused-def]
+module prim_rst_sync #(
+       ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_register_file_fpga.sv:17:37: warning: unused parameter 'DummyInstructions' [-Wunused-parameter]
+    parameter bit                   DummyInstructions = 0,
+                                    ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_register_file_fpga.sv:51:25: warning: variable 'mem_o_a' is never assigned a value [-Wunassigned-variable]
+  logic [DataWidth-1:0] mem_o_a, mem_o_b;
+                        ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_register_file_fpga.sv:51:34: warning: variable 'mem_o_b' is never assigned a value [-Wunassigned-variable]
+  logic [DataWidth-1:0] mem_o_a, mem_o_b;
+                                 ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_register_file_fpga.sv:191:9: warning: variable 'unused_rst_ni' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_rst_ni;
+        ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_register_file_fpga.sv:195:9: warning: variable 'unused_dummy_instr' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_dummy_instr;
+        ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_register_file_fpga.sv:198:9: warning: variable 'unused_test_en' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic unused_test_en;
+        ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:257:11: warning: variable 'unused_core_busy' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_core_busy;
+          ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:300:11: warning: variable 'unused_intg' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_intg;
+          ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:574:11: warning: unused variable 'unused_scramble_inputs' [-Wunused-variable]
+    logic unused_scramble_inputs = scramble_key_valid_i & (|scramble_key_i) & (|RndCnstIbexKey) &
+          ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:757:11: warning: variable 'unused_ram_cfg' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_ram_cfg;
+          ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:758:11: warning: variable 'unused_ram_inputs' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_ram_inputs;
+          ^
+src/lowrisc_ibex_ibex_top_0.1/rtl/ibex_top.sv:1148:11: warning: variable 'unused_scan' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused_scan;
+          ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:37:9: warning: variable 'rx_data_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic rx_data_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:38:9: warning: variable 'rx_len_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic rx_len_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:39:9: warning: variable 'status_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic status_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:40:9: warning: variable 'ctrl_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic ctrl_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:50:9: warning: variable 'timeout_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic timeout_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:53:9: warning: variable 'thresh_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic thresh_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:56:9: warning: variable 'flush_char_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic flush_char_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:59:9: warning: variable 'irq_status_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic irq_status_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr_reg_top.sv:65:9: warning: variable 'irq_enable_re' is assigned but its value is never used [-Wunused-but-set-variable]
+  logic irq_enable_re;
+        ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_csr.sv:236:11: warning: variable 'unused' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused;
+          ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart_rx_ctrl.sv:88:29: warning: unused parameter 'LenDepthW' [-Wunused-parameter]
+    localparam int unsigned LenDepthW = prim_util_pkg::vbits(LEN_DEPTH + 1);
+                            ^
+src/mono_ip_usb_uart_0.1.0/rtl/usb_uart.sv:330:11: warning: variable 'unused' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused;
+          ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/usb_subsystem.sv:186:11: warning: variable 'unused' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused;
+          ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/core.sv:249:11: warning: variable 'unused' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused;
+          ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:25:25: warning: undriven output port 'usb_fifo_data' [-Wundriven-port]
+    inout  logic [31:0] usb_fifo_data,
+                        ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:26:25: warning: undriven output port 'usb_fifo_be' [-Wundriven-port]
+    inout  logic [3:0]  usb_fifo_be,
+                        ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:40:11: warning: variable 'clk100_buf' is never assigned a value [-Wunassigned-variable]
+    logic clk100_buf;
+          ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:45:11: warning: variable 'rst_por' is never assigned a value [-Wunassigned-variable]
+    logic rst_por;
+          ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:118:18: warning: variable 'usb_data_i' is never assigned a value [-Wunassigned-variable]
+    logic [31:0] usb_data_i, usb_data_o;
+                 ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:134:17: warning: variable 'usb_be_i_unused' is never assigned a value [-Wunassigned-variable]
+    logic [3:0] usb_be_i_unused;
+                ^
+src/mono_projects_squirrel_ibex_soc_0/rtl/squirrel_ibex_top.sv:191:11: warning: variable 'unused' is assigned but its value is never used [-Wunused-but-set-variable]
+    logic unused;
+          ^
+Top level design units:
+    squirrel_ibex_top
+
+
+Build failed: 12 errors, 395 warnings
+ERROR: Failed to build mono:projects:squirrel_ibex_soc:0 : Slang lint check failed

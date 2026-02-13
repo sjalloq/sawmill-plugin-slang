@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sawmill-plugin-slang"
+dynamic = ["version"]
+description = "Sawmill plugin for slang"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Shareef Jalloq"}
+]
+keywords = ["sawmill", "plugin", "slang", "eda", "log"]
+
+dependencies = [
+    "sawmill>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "ruff>=0.4.0",
+]
+
+[project.entry-points."sawmill.plugins"]
+slang = "sawmill_plugin_slang:SlangPlugin"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/sawmill_plugin_slang/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sawmill_plugin_slang"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.sawmill]
+plugin_api = "1"
