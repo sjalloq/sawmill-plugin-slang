@@ -7,6 +7,8 @@ immediately after generation.
 
 from __future__ import annotations
 
+from collections.abc import Iterator
+
 from sawmill.plugin import SawmillPlugin
 
 
@@ -30,12 +32,12 @@ class TestPluginContract:
         assert isinstance(result, float), f"Expected float, got {type(result)}"
         assert 0.0 <= result <= 1.0, f"Confidence must be 0.0-1.0, got {result}"
 
-    def test_load_and_parse_returns_list(self, plugin, tmp_path):
-        """load_and_parse must return a list."""
+    def test_load_and_parse_returns_iterator(self, plugin, tmp_path):
+        """load_and_parse must return an iterator (generator)."""
         dummy = tmp_path / "test.log"
         dummy.write_text("test content\n")
         result = plugin.load_and_parse(dummy)
-        assert isinstance(result, list)
+        assert isinstance(result, Iterator)
 
     def test_get_filters_returns_list(self, plugin):
         """get_filters must return a list."""
@@ -66,7 +68,7 @@ class TestPluginContract:
     def test_parsed_severities_match_declared(self, plugin, sample_log):
         """Message severities should be from declared severity IDs."""
         declared_ids = {lv["id"] for lv in plugin.get_severity_levels()}
-        messages = plugin.load_and_parse(sample_log)
+        messages = list(plugin.load_and_parse(sample_log))
         for msg in messages:
             if msg.severity is not None:
                 assert msg.severity in declared_ids, (

@@ -12,18 +12,18 @@ class TestLoadAndParse:
 
     def test_returns_list(self, plugin, sample_log):
         """load_and_parse should return a list."""
-        result = plugin.load_and_parse(sample_log)
+        result = list(plugin.load_and_parse(sample_log))
         assert isinstance(result, list)
 
     def test_items_are_messages(self, plugin, sample_log):
         """Each item should be a Message instance."""
-        messages = plugin.load_and_parse(sample_log)
+        messages = list(plugin.load_and_parse(sample_log))
         for msg in messages:
             assert isinstance(msg, Message), f"Expected Message, got {type(msg)}"
 
     def test_messages_have_required_fields(self, plugin, sample_log):
         """Each message should have start_line, raw_text, and content populated."""
-        messages = plugin.load_and_parse(sample_log)
+        messages = list(plugin.load_and_parse(sample_log))
         for msg in messages:
             assert msg.start_line >= 1, "start_line should be >= 1"
             assert msg.raw_text, "raw_text should not be empty"
@@ -33,12 +33,12 @@ class TestLoadAndParse:
         """An empty file should return an empty list."""
         empty = tmp_path / "empty.log"
         empty.write_text("")
-        assert plugin.load_and_parse(empty) == []
+        assert list(plugin.load_and_parse(empty)) == []
 
     def test_missing_file_returns_empty_list(self, plugin, tmp_path):
         """A non-existent file should return an empty list."""
         missing = tmp_path / "missing.log"
-        assert plugin.load_and_parse(missing) == []
+        assert list(plugin.load_and_parse(missing)) == []
 
 
 class TestErrorMessageId:
@@ -52,7 +52,7 @@ class TestErrorMessageId:
             "  BUFG u_bufg_fb (\n"
             "  ^~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].message_id == "unknown-module"
 
@@ -64,7 +64,7 @@ class TestErrorMessageId:
             "    input  logic [DepthW-1:0] fifo_depth_i,\n"
             "                  ^~~~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].message_id == "identifier-used-before-its-declaration"
 
@@ -74,7 +74,7 @@ class TestErrorMessageId:
         log.write_text(
             "ERROR: Failed to build mono:projects:squirrel : Slang lint check failed\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].severity == "error"
         assert msgs[0].message_id is not None
@@ -86,7 +86,7 @@ class TestErrorMessageId:
         log.write_text(
             "src/foo.sv:10:5: error: completely new error type never seen before\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].message_id == "completely-new-error-type-never-seen-before"
 
@@ -103,7 +103,7 @@ class TestWarningMessageId:
             "    for (int m = 0; m < NumMasters; m++) begin\n"
             "                    ~ ^ ~~~~~~~~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].message_id == "sign-compare"
 
@@ -119,7 +119,7 @@ class TestCategoryPopulated:
             "    for (int m = 0; m < NumMasters; m++) begin\n"
             "                    ~ ^ ~~~~~~~~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].category == "sign"
 
@@ -131,7 +131,7 @@ class TestCategoryPopulated:
             "  BUFG u_bufg_fb (\n"
             "  ^~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].category == "unknown"
 
@@ -141,7 +141,7 @@ class TestCategoryPopulated:
         log.write_text(
             "src/foo.sv:10:5: note: 12345\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].message_id is None
         assert msgs[0].category is None
@@ -162,7 +162,7 @@ class TestNoteGrouping:
             "  input  logic  key_valid_i,\n"
             "                ^~~~~~~~~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].severity == "warning"
         assert msgs[0].message_id == "static-init-value"
@@ -180,7 +180,7 @@ class TestNoteGrouping:
             "    localparam int unsigned DepthW = prim_util_pkg::vbits(DEPTH + 1);\n"
             "                            ^\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].severity == "error"
         assert "note: declared here" in msgs[0].raw_text
@@ -193,7 +193,7 @@ class TestNoteGrouping:
             "  context line\n"
             "  ^~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].severity == "note"
 
@@ -211,7 +211,7 @@ class TestNoteGrouping:
             "  note context 2\n"
             "  ^\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].severity == "warning"
         assert "first note" in msgs[0].raw_text
@@ -232,7 +232,7 @@ class TestNoteGrouping:
             "  context\n"
             "  ^~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 2
         assert msgs[0].severity == "warning"
         assert "relates to first warning" in msgs[0].raw_text
@@ -251,7 +251,7 @@ class TestMultilineGrouping:
             "    for (int m = 0; m < NumMasters; m++) begin\n"
             "                    ~ ^ ~~~~~~~~~~\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].start_line == 1
         assert msgs[0].end_line == 3
@@ -271,7 +271,7 @@ class TestInstanceMetadata:
             "                    ~ ^ ~~~~~~~~~~\n"
             "  in instance: top.u_core.u_soc\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].metadata.get("instance") == "top.u_core.u_soc"
 
@@ -286,7 +286,7 @@ class TestBuildError:
             "Build failed: 12 errors, 395 warnings\n"
             "ERROR: Failed to build project : Slang lint check failed\n"
         )
-        msgs = plugin.load_and_parse(log)
+        msgs = list(plugin.load_and_parse(log))
         assert len(msgs) == 1
         assert msgs[0].severity == "error"
         assert "Failed to build" in msgs[0].content
@@ -326,3 +326,32 @@ class TestExtractFileReference:
         """Should return None when no file reference found."""
         ref = plugin.extract_file_reference("no file reference here")
         assert ref is None
+
+
+class TestStreamingSemantics:
+    """Behaviour preserved from the list-returning implementation."""
+
+    def test_nonindented_lines_after_note_are_absorbed(self, plugin, tmp_path):
+        """After an absorbed note, non-indented context stays in the message."""
+        lines = [
+            "a.sv:1:1: warning: thing [-Wfoo]",
+            "  x",
+            "  ^",
+            "a.sv:2:1: note: declared here",
+            "nonindented ctx",
+            "  y",
+        ]
+        log = tmp_path / "note.log"
+        log.write_text("\n".join(lines) + "\n")
+        msgs = list(plugin.load_and_parse(log))
+        assert len(msgs) == 1
+        assert msgs[0].start_line == 1
+        assert msgs[0].end_line == 6
+        for line in lines:
+            assert line in msgs[0].raw_text
+
+    def test_missing_file_is_eager_and_silent(self, plugin, tmp_path):
+        """A missing path returns an empty iterator without raising."""
+        it = plugin.load_and_parse(tmp_path / "nope.log")
+        assert iter(it) is it
+        assert list(it) == []

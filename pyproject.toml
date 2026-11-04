@@ -47,4 +47,4 @@ line-length = 100
 select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
 
 [tool.sawmill]
-plugin_api = "1"
+plugin_api = "2"

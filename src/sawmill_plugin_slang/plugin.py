@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+from collections.abc import Iterator
 from importlib.metadata import version
 from pathlib import Path
+from typing import TextIO
 
 from sawmill.models.filter_def import FilterDefinition
 from sawmill.models.message import FileRef, Message
@@ -21,6 +23,9 @@ from sawmill_plugin_slang.patterns import (
 
 # Number of lines to scan for can_handle detection
 _DETECTION_LINES = 100
+
+# load_and_parse state-machine modes (see SlangPlugin._parse_stream)
+_PLAIN, _PRIMARY, _NOTE = range(3)
 
 
 class SlangPlugin(SawmillPlugin):
@@ -94,29 +99,35 @@ class SlangPlugin(SawmillPlugin):
         return parts[0] if parts else None
 
     @hookimpl
-    def load_and_parse(self, path: Path) -> list[Message]:
-        """Load and parse a slang log file into messages.
+    def load_and_parse(self, path: Path) -> Iterator[Message]:
+        """Stream a slang log file as parsed messages.
 
-        Iterates through the file, detecting primary diagnostic lines
-        and grouping continuation lines (source context, caret indicators,
-        instance hierarchy) into multi-line messages. Note diagnostics
-        are absorbed into their preceding warning/error parent.
+        The file is checked and opened eagerly, when this is called, so a
+        missing or unreadable file yields an empty iterator without raising.
+        Parsing then proceeds lazily via `_parse_stream`.
         """
         if not path.exists():
-            return []
-
+            return iter(())
         try:
-            with open(path, encoding="utf-8", errors="replace") as f:
-                lines = f.readlines()
+            f = open(path, encoding="utf-8", errors="replace")
         except OSError:
-            return []
+            return iter(())
+        return self._parse_stream(f)
 
-        if not lines:
-            return []
+    def _parse_stream(self, f: TextIO) -> Iterator[Message]:
+        """Single-pass state machine over an open file; closes it when done.
 
-        messages: list[Message] = []
+        Modes:
+          - ``_PLAIN``: no continuation context. Indented and instance lines
+            extend the current message; a `note:` is absorbed only into a
+            warning/error parent; other text flushes and is dropped.
+          - ``_PRIMARY``: after a primary diagnostic. Indented and instance
+            lines extend it; any `note:` is absorbed; other text flushes.
+          - ``_NOTE``: after an absorbed `note:`. Every non-blank line that is
+            not a new diagnostic or build error is appended, indented or not.
 
-        # State for current message being built
+        Memory stays O(one in-flight message).
+        """
         current_lines: list[str] = []
         current_start: int = 0
         current_severity: str | None = None
@@ -124,166 +135,120 @@ class SlangPlugin(SawmillPlugin):
         current_file_ref: FileRef | None = None
         current_message_id: str | None = None
         current_instance: str | None = None
+        mode = _PLAIN
 
-        def _flush() -> None:
-            """Flush the current message into the messages list."""
-            if not current_lines or current_severity is None:
-                return
-
+        def _build() -> Message:
             raw_text = "\n".join(current_lines)
             metadata: dict[str, str] = {}
             if current_instance:
                 metadata["instance"] = current_instance
-
-            messages.append(
-                Message(
-                    start_line=current_start,
-                    end_line=current_start + len(current_lines) - 1,
-                    raw_text=raw_text,
-                    content=current_content or raw_text,
-                    severity=current_severity,
-                    message_id=current_message_id,
-                    category=self._extract_category(current_message_id),
-                    file_ref=current_file_ref,
-                    metadata=metadata,
-                )
+            return Message(
+                start_line=current_start,
+                end_line=current_start + len(current_lines) - 1,
+                raw_text=raw_text,
+                content=current_content or raw_text,
+                severity=current_severity,
+                message_id=current_message_id,
+                category=self._extract_category(current_message_id),
+                file_ref=current_file_ref,
+                metadata=metadata,
             )
 
-        idx = 0
-        while idx < len(lines):
-            raw_line = lines[idx]
-            line_num = idx + 1  # 1-indexed
-            line = raw_line.rstrip("\n")
-            idx += 1
+        def _reset() -> None:
+            nonlocal current_severity, current_content
+            nonlocal current_file_ref, current_message_id, current_instance
+            current_lines.clear()
+            current_severity = None
+            current_content = None
+            current_file_ref = None
+            current_message_id = None
+            current_instance = None
 
-            # Skip empty lines (they separate message blocks)
-            if not line.strip():
-                _flush()
-                current_lines = []
-                current_severity = None
-                continue
+        try:
+            for line_num, raw in enumerate(f, 1):
+                line = raw.rstrip("\n")
 
-            # Check for primary diagnostic line
-            diag_match = DIAGNOSTIC_PATTERN.match(line)
-            if diag_match:
-                filepath, line_no, _col_no, severity, msg_text = diag_match.groups()
-
-                # If this is a note: and we have a parent warning/error, absorb it
-                if severity == "note" and current_lines and current_severity in (
-                    "warning",
-                    "error",
-                ):
-                    current_lines.append(line)
-                    # Collect continuation lines for this note
-                    while idx < len(lines):
-                        next_line = lines[idx].rstrip("\n")
-                        if not next_line.strip():
-                            break
-                        if DIAGNOSTIC_PATTERN.match(next_line):
-                            break
-                        if BUILD_ERROR_PATTERN.match(next_line):
-                            break
-                        current_lines.append(next_line)
-                        idx += 1
+                # Empty line separates message blocks.
+                if not line.strip():
+                    if current_lines and current_severity is not None:
+                        yield _build()
+                    _reset()
+                    mode = _PLAIN
                     continue
 
-                # Not a note absorbed into parent — flush previous and start new
-                _flush()
+                diag_match = DIAGNOSTIC_PATTERN.match(line)
+                if diag_match:
+                    filepath, line_no, _col_no, severity, msg_text = diag_match.groups()
 
-                current_lines = [line]
-                current_start = line_num
-                current_severity = severity
-                current_content = msg_text
-                current_file_ref = FileRef(path=filepath, line=int(line_no))
-                current_instance = None
-
-                # Extract warning flag as message_id
-                flag_match = WARNING_FLAG_PATTERN.search(msg_text)
-                if flag_match:
-                    current_message_id = flag_match.group(1)
-                elif severity == "error":
-                    current_message_id = self._synthesize_error_id(msg_text)
-                else:
-                    current_message_id = None
-
-                # Collect continuation lines (source context, carets, instance)
-                while idx < len(lines):
-                    next_line = lines[idx].rstrip("\n")
-                    if not next_line.strip():
-                        break
-                    if DIAGNOSTIC_PATTERN.match(next_line):
-                        break
-                    if BUILD_ERROR_PATTERN.match(next_line):
-                        break
-                    instance_match = INSTANCE_PATTERN.match(next_line)
-                    if instance_match:
-                        current_instance = instance_match.group(1)
-                        current_lines.append(next_line)
-                        idx += 1
+                    # `note:` diagnostics are absorbed into a parent message.
+                    if severity == "note" and current_lines and (
+                        mode != _PLAIN or current_severity in ("warning", "error")
+                    ):
+                        current_lines.append(line)
+                        mode = _NOTE
                         continue
-                    if next_line[0].isspace():
-                        current_lines.append(next_line)
-                        idx += 1
-                        continue
-                    break
 
-                # After collecting continuation lines, peek for note: diagnostics
-                while idx < len(lines):
-                    next_line = lines[idx].rstrip("\n")
-                    note_match = DIAGNOSTIC_PATTERN.match(next_line)
-                    if note_match and note_match.group(4) == "note":
-                        current_lines.append(next_line)
-                        idx += 1
-                        # Collect note's continuation lines
-                        while idx < len(lines):
-                            note_cont = lines[idx].rstrip("\n")
-                            if not note_cont.strip():
-                                break
-                            if DIAGNOSTIC_PATTERN.match(note_cont):
-                                break
-                            if BUILD_ERROR_PATTERN.match(note_cont):
-                                break
-                            current_lines.append(note_cont)
-                            idx += 1
+                    # New primary diagnostic: flush previous, start fresh.
+                    if current_lines and current_severity is not None:
+                        yield _build()
+                    _reset()
+                    mode = _PRIMARY
+
+                    current_lines.append(line)
+                    current_start = line_num
+                    current_severity = severity
+                    current_content = msg_text
+                    current_file_ref = FileRef(path=filepath, line=int(line_no))
+
+                    flag_match = WARNING_FLAG_PATTERN.search(msg_text)
+                    if flag_match:
+                        current_message_id = flag_match.group(1)
+                    elif severity == "error":
+                        current_message_id = self._synthesize_error_id(msg_text)
                     else:
-                        break
+                        current_message_id = None
+                    continue
 
-                continue
+                build_match = BUILD_ERROR_PATTERN.match(line)
 
-            # Check for instance context line (continuation)
-            instance_match = INSTANCE_PATTERN.match(line)
-            if instance_match and current_lines:
-                current_instance = instance_match.group(1)
-                current_lines.append(line)
-                continue
+                # After an absorbed note, everything up to the next blank line,
+                # diagnostic or build error belongs to the message.
+                if mode == _NOTE and not build_match:
+                    current_lines.append(line)
+                    continue
 
-            # Indented line = continuation (source context, caret indicator)
-            if line[0].isspace() and current_lines:
-                current_lines.append(line)
-                continue
+                instance_match = INSTANCE_PATTERN.match(line)
+                if instance_match and current_lines:
+                    current_instance = instance_match.group(1)
+                    current_lines.append(line)
+                    continue
 
-            # Non-diagnostic, non-continuation: check for build system error
-            build_match = BUILD_ERROR_PATTERN.match(line)
-            if build_match:
-                _flush()
-                current_lines = [line]
-                current_start = line_num
-                current_severity = "error"
-                current_content = build_match.group(1)
-                current_file_ref = None
-                current_message_id = self._synthesize_error_id(build_match.group(1))
-                current_instance = None
-                continue
+                if line[0].isspace() and current_lines:
+                    current_lines.append(line)
+                    continue
 
-            # Other non-diagnostic lines (summary, headers): flush and skip
-            _flush()
-            current_lines = []
-            current_severity = None
+                if build_match:
+                    if current_lines and current_severity is not None:
+                        yield _build()
+                    _reset()
+                    mode = _PLAIN
+                    current_lines.append(line)
+                    current_start = line_num
+                    current_severity = "error"
+                    current_content = build_match.group(1)
+                    current_message_id = self._synthesize_error_id(build_match.group(1))
+                    continue
 
-        # Flush final message
-        _flush()
+                # Non-diagnostic, non-continuation line: flush and drop.
+                if current_lines and current_severity is not None:
+                    yield _build()
+                _reset()
+                mode = _PLAIN
 
-        return messages
+            if current_lines and current_severity is not None:
+                yield _build()
+        finally:
+            f.close()
 
     @hookimpl
     def get_severity_levels(self) -> list[dict]:
